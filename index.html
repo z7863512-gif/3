@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戒菸全攻略 - 邁向健康新生活</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f0fdf4;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #10b981;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-white py-8 px-4 shadow-lg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">戒菸全攻略互動指南</h1>
+            <p class="text-green-100">給自己一個深呼吸的機會，今天就是最好的開始。</p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="bg-white sticky top-0 shadow-md z-10">
+        <div class="max-w-5xl mx-auto flex overflow-x-auto">
+            <button onclick="showTab('benefits')" class="tab-btn px-6 py-4 flex-1 text-center font-medium border-b-4 border-green-600 text-green-600 whitespace-nowrap">
+                <i class="fas fa-star mr-2"></i>戒菸好處
+            </button>
+            <button onclick="showTab('methods')" class="tab-btn px-6 py-4 flex-1 text-center font-medium border-b-4 border-transparent hover:text-green-600 whitespace-nowrap">
+                <i class="fas fa-hand-holding-heart mr-2"></i>戒菸方式
+            </button>
+            <button onclick="showTab('channels')" class="tab-btn px-6 py-4 flex-1 text-center font-medium border-b-4 border-transparent hover:text-green-600 whitespace-nowrap">
+                <i class="fas fa-map-marker-alt mr-2"></i>協助管道
+            </button>
+            <button onclick="showTab('strategies')" class="tab-btn px-6 py-4 flex-1 text-center font-medium border-b-4 border-transparent hover:text-green-600 whitespace-nowrap">
+                <i class="fas fa-chess-knight mr-2"></i>應對策略
+            </button>
+            <button onclick="showTab('policy')" class="tab-btn px-6 py-4 flex-1 text-center font-medium border-b-4 border-transparent hover:text-green-600 whitespace-nowrap">
+                <i class="fas fa-gavel mr-2"></i>政策規範
+            </button>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-4 md:p-8">
+        
+        <!-- Tab: Benefits (New) -->
+        <section id="benefits" class="tab-content active space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-l-8 border-yellow-500">
+                <h2 class="text-2xl font-bold mb-6">為什麼要戒菸？驚人的身體變化</h2>
+                
+                <!-- Timeline -->
+                <div class="space-y-8 relative">
+                    <div class="flex items-start ml-8 timeline-item relative">
+                        <div class="absolute -left-10 mt-1 bg-green-500 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                        <div>
+                            <h3 class="font-bold text-green-700">20 分鐘後</h3>
+                            <p class="text-gray-600 text-sm">心跳與血壓開始下降，恢復正常。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start ml-8 timeline-item relative">
+                        <div class="absolute -left-10 mt-1 bg-green-500 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                        <div>
+                            <h3 class="font-bold text-green-700">12 小時後</h3>
+                            <p class="text-gray-600 text-sm">血液中一氧化碳含量降至正常標準，血液含氧量增加。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start ml-8 timeline-item relative">
+                        <div class="absolute -left-10 mt-1 bg-green-500 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                        <div>
+                            <h3 class="font-bold text-green-700">2 - 12 週後</h3>
+                            <p class="text-gray-600 text-sm">血液循環改善，肺功能開始顯著提升。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start ml-8 timeline-item relative">
+                        <div class="absolute -left-10 mt-1 bg-green-500 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                        <div>
+                            <h3 class="font-bold text-green-700">1 - 9 個月後</h3>
+                            <p class="text-gray-600 text-sm">咳嗽、呼吸短促情況大幅減少，肺部纖毛恢復排痰功能。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start ml-8 timeline-item relative">
+                        <div class="absolute -left-10 mt-1 bg-orange-500 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                        <div>
+                            <h3 class="font-bold text-orange-700">1 年後</h3>
+                            <p class="text-gray-600 text-sm">罹患冠狀動脈心臟病的風險降低 50%。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start ml-8 timeline-item relative">
+                        <div class="absolute -left-10 mt-1 bg-red-500 w-4 h-4 rounded-full border-4 border-white shadow"></div>
+                        <div>
+                            <h3 class="font-bold text-red-700">5 - 15 年後</h3>
+                            <p class="text-gray-600 text-sm">中風與肺癌死亡風險降至與非吸菸者相近。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 mt-10">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-magic mr-2"></i>外觀與形象</h4>
+                        <ul class="text-xs text-blue-700 space-y-1">
+                            <li>• 皮膚變透亮，減少皺紋</li>
+                            <li>• 牙齒變白，消除口臭</li>
+                            <li>• 衣服不再有菸味</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-purple-800 mb-2"><i class="fas fa-smile mr-2"></i>心理與社交</h4>
+                        <ul class="text-xs text-purple-700 space-y-1">
+                            <li>• 降低焦慮與壓力感</li>
+                            <li>• 保護家人免於二手菸害</li>
+                            <li>• 重拾對生活的主控權</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-utensils mr-2"></i>生活品質</h4>
+                        <ul class="text-xs text-green-700 space-y-1">
+                            <li>• 味覺與嗅覺恢復靈敏</li>
+                            <li>• 體力變好，運動不喘</li>
+                            <li>• 省下大筆菸捐預算</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab: Methods -->
+        <section id="methods" class="tab-content space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-l-8 border-green-500">
+                <h2 class="text-2xl font-bold mb-4">專業戒菸方式</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-4 border rounded-lg card-hover">
+                        <h3 class="font-bold text-green-700 text-lg mb-2"><i class="fas fa-pills mr-2"></i>尼古丁替代療法 (NRT)</h3>
+                        <p class="text-sm text-gray-600">利用貼片、嚼錠、噴霧提供少量尼古丁，緩解戒斷症狀，提高成功率 2 倍。</p>
+                    </div>
+                    <div class="p-4 border rounded-lg card-hover">
+                        <h3 class="font-bold text-green-700 text-lg mb-2"><i class="fas fa-stethoscope mr-2"></i>非尼古丁口服藥</h3>
+                        <p class="text-sm text-gray-600">由醫師處方，可降低對吸菸的渴望與愉悅感，阻斷尼古丁受體。</p>
+                    </div>
+                    <div class="p-4 border rounded-lg card-hover">
+                        <h3 class="font-bold text-green-700 text-lg mb-2"><i class="fas fa-comments mr-2"></i>行為諮商</h3>
+                        <p class="text-sm text-gray-600">透過心理建設與習慣調整，找出吸菸誘因並給予取代行為建議。</p>
+                    </div>
+                    <div class="p-4 border rounded-lg card-hover">
+                        <h3 class="font-bold text-green-700 text-lg mb-2"><i class="fas fa-leaf mr-2"></i>自然減量法</h3>
+                        <p class="text-sm text-gray-600">設定目標每日遞減菸量，但在臨床上成功率較低，建議搭配藥物輔助。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab: Channels -->
+        <section id="channels" class="tab-content space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-l-8 border-blue-500">
+                <h2 class="text-2xl font-bold mb-4">免費戒菸資源與管道</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start p-4 bg-blue-50 rounded-lg">
+                        <div class="bg-blue-500 text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">0800-636363 戒菸專線</h3>
+                            <p class="text-gray-600 text-sm">國健署提供的專業諮詢，隱密性高，由心理諮商師陪你度過戒菸難關。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-blue-50 rounded-lg">
+                        <div class="bg-blue-500 text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">戒菸合約醫療院所</h3>
+                            <p class="text-gray-600 text-sm">全台超過 3,500 家醫院及診所，提供戒菸門診。只需付掛號費及部分藥費。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab: Strategies -->
+        <section id="strategies" class="tab-content space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-l-8 border-orange-500">
+                <h2 class="text-2xl font-bold mb-4">成功戒菸的策略：4D 法則</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                        <h3 class="font-bold text-orange-800">1. Delay (延遲需求)</h3>
+                        <p class="text-sm">菸癮發作時，等 5-10 分鐘再決定，衝動通常會隨時間消退。</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                        <h3 class="font-bold text-orange-800">2. Deep Breathing (深呼吸)</h3>
+                        <p class="text-sm">進行 3-5 次深長且緩慢的呼吸，緩解緊張情緒與生理渴望。</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                        <h3 class="font-bold text-orange-800">3. Drink Water (喝杯冷水)</h3>
+                        <p class="text-sm">小口啜飲清水，能洗滌口中異味，並幫助新陳代謝排毒。</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                        <h3 class="font-bold text-orange-800">4. Do something else (轉移注意力)</h3>
+                        <p class="text-sm">起身走動、刷牙、嚼食無糖口香糖或洗臉，打破原本吸菸的連結。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab: Policy -->
+        <section id="policy" class="tab-content space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border-l-8 border-red-500">
+                <h2 class="text-2xl font-bold mb-4">菸害防制政策與規範 (台灣)</h2>
+                <div class="space-y-4">
+                    <div class="border-b pb-2 text-sm">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold mr-2">新法規</span>
+                        <strong>全面禁用電子煙、加熱菸管制：</strong>
+                        <p class="text-gray-600 mt-1">目前台灣禁止電子煙之製造、輸入、販賣、展示及使用。</p>
+                    </div>
+                    <div class="border-b pb-2 text-sm">
+                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold mr-2">禁菸區</span>
+                        <strong>校園及托兒所全面禁菸：</strong>
+                        <p class="text-gray-600 mt-1">包含各級學校、幼兒園及其他特定室內外公共場所。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Card -->
+        <div class="mt-12 bg-green-700 text-white rounded-2xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold mb-4"><i class="fas fa-calculator mr-2"></i>戒菸省錢計算機</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="block mb-1 text-sm">平均一包菸的價格 (NTD)：</label>
+                    <input type="number" id="price" value="125" class="w-full p-2 rounded text-gray-900">
+                </div>
+                <div>
+                    <label class="block mb-1 text-sm">每天吸幾包：</label>
+                    <input type="number" id="count" value="1" step="0.5" class="w-full p-2 rounded text-gray-900">
+                </div>
+                <button onclick="calculateSavings()" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-3 rounded-lg transition-colors shadow-md">
+                    計算我的財富增長
+                </button>
+                <div id="save-result" class="hidden mt-4 p-4 bg-green-800 rounded-lg">
+                    <p class="text-lg font-medium">如果您戒菸...</p>
+                    <ul class="list-disc ml-5 space-y-1 mt-2">
+                        <li>一年可節省約 <span id="save-year" class="font-bold text-yellow-300 text-xl">0</span> 元</li>
+                        <li>十年可節省約 <span id="save-ten" class="font-bold text-yellow-300 text-xl">0</span> 元</li>
+                    </ul>
+                    <p class="mt-4 text-sm opacity-90 italic" id="reward-text"></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>資料來源：國民健康署 (Health Promotion Administration) | 以上資訊僅供衛教參考</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Update Tab Visibility
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+
+            // Update Tab Button Styles
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-green-600', 'text-green-600');
+                btn.classList.add('border-transparent');
+            });
+            
+            // Find the button that was clicked and style it
+            const clickedBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => 
+                btn.getAttribute('onclick').includes(tabId)
+            );
+            if(clickedBtn) {
+                clickedBtn.classList.remove('border-transparent');
+                clickedBtn.classList.add('border-green-600', 'text-green-600');
+            }
+        }
+
+        function calculateSavings() {
+            const price = parseFloat(document.getElementById('price').value);
+            const count = parseFloat(document.getElementById('count').value);
+            
+            if (isNaN(price) || isNaN(count)) {
+                return;
+            }
+
+            const daily = price * count;
+            const yearly = Math.round(daily * 365);
+            const tenYears = Math.round(yearly * 10);
+
+            document.getElementById('save-year').innerText = yearly.toLocaleString();
+            document.getElementById('save-ten').innerText = tenYears.toLocaleString();
+            
+            const rewardText = document.getElementById('reward-text');
+            if (yearly > 100000) {
+                rewardText.innerText = "這筆錢每年足夠買一張到歐美的往返機票！";
+            } else if (yearly > 40000) {
+                rewardText.innerText = "這筆錢每年足夠買一支最新的旗艦手機！";
+            } else {
+                rewardText.innerText = "這筆錢每年足夠您吃 50 頓豪華大餐！";
+            }
+
+            document.getElementById('save-result').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
